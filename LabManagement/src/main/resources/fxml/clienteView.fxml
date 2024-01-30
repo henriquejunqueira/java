@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="625.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.junqueira.controller.ClienteController">
+   <children>
+      <HBox alignment="CENTER" layoutY="342.0" prefHeight="83.0" prefWidth="600.0" style="-fx-background-color: #6495ED;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <TextField fx:id="tfPesquisa" onKeyPressed="#pesquisarRegistro" prefHeight="25.0" prefWidth="522.0" style="-fx-background-radius: 30;" />
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../icons/View.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="280.0" prefHeight="62.0" prefWidth="600.0" style="-fx-background-color: #6495ED;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="btnNovo" mnemonicParsing="false" onAction="#novoCadastro" prefHeight="43.0" prefWidth="136.0" style="-fx-background-radius: 30;" text="Novo">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/Create.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnSalvar" layoutX="237.0" layoutY="20.0" mnemonicParsing="false" onAction="#salvarCadastro" prefHeight="43.0" prefWidth="136.0" style="-fx-background-radius: 30;" text="Salvar">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/Save.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnExcluir" layoutX="315.0" layoutY="20.0" mnemonicParsing="false" onAction="#excluirCadastro" prefHeight="43.0" prefWidth="136.0" style="-fx-background-radius: 30;" text="Excluir">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/cancel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <TableView fx:id="tvClientes" layoutY="425.0" onMouseClicked="#clicarTabela" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #c9c9c9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <AnchorPane layoutY="15.0" prefHeight="280.0" prefWidth="600.0" style="-fx-background-color: #c9c9c9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXTextField fx:id="tfId" editable="false" labelFloat="true" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="82.0" promptText="Id" />
+            <JFXTextField fx:id="tfCliente" labelFloat="true" layoutX="104.0" layoutY="14.0" prefHeight="25.0" prefWidth="484.0" promptText="Cliente" />
+            <JFXTextField fx:id="tfOS" labelFloat="true" layoutX="14.0" layoutY="67.0" promptText="OS" />
+            <JFXTextField fx:id="tfSolicitacaoServico" labelFloat="true" layoutX="165.0" layoutY="67.0" prefHeight="25.0" prefWidth="424.0" promptText="Solicitação de Serviço" />
+            <JFXComboBox fx:id="cbStatusServico" labelFloat="true" layoutX="302.0" layoutY="117.0" prefHeight="25.0" prefWidth="284.0" promptText="Status de Serviço" />
+            <JFXTextArea fx:id="taAveriguacao" labelFloat="true" layoutX="14.0" layoutY="172.0" prefHeight="92.0" prefWidth="576.0" promptText="Averiguação" />
+            <JFXComboBox fx:id="cbTecnicoAtendente" labelFloat="true" layoutX="12.0" layoutY="117.0" prefHeight="25.0" prefWidth="277.0" promptText="Técnico/Atendente" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

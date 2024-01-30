@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="597.0" prefWidth="600.0" style="-fx-background-color: #c9c9c9;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.junqueira.controller.ServicoController">
+   <children>
+      <TableView fx:id="tvServicos" layoutX="1.0" layoutY="413.0" onMouseClicked="#clicarTabela" prefHeight="198.0" prefWidth="564.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <HBox alignment="CENTER" layoutY="344.0" prefHeight="55.0" prefWidth="600.0" style="-fx-background-color: #6495ED;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <TextField fx:id="tfPesquisa" onKeyPressed="#pesquisarRegistro" prefHeight="25.0" prefWidth="535.0" style="-fx-background-radius: 30;">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </TextField>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/View.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <JFXTextField fx:id="tfId" editable="false" labelFloat="true" layoutX="12.0" layoutY="14.0" prefHeight="25.0" prefWidth="65.0" promptText="Id" AnchorPane.leftAnchor="10.0" />
+      <JFXTextField fx:id="tfCliente" editable="false" labelFloat="true" layoutX="86.0" layoutY="14.0" prefHeight="25.0" prefWidth="504.0" promptText="Cliente" AnchorPane.rightAnchor="10.0" />
+      <JFXTextField fx:id="tfOS" editable="false" labelFloat="true" layoutX="12.0" layoutY="57.0" promptText="OS" AnchorPane.leftAnchor="10.0" />
+      <JFXTextField fx:id="tfSolicitacaoServico" editable="false" labelFloat="true" layoutX="155.0" layoutY="57.0" prefHeight="25.0" prefWidth="437.0" promptText="Solicitação de Serviço" AnchorPane.rightAnchor="10.0" />
+      <JFXTextField fx:id="tfTecnicoAtendente" editable="false" labelFloat="true" layoutX="12.0" layoutY="100.0" prefHeight="25.0" prefWidth="291.0" promptText="Técnico/Atendente" AnchorPane.leftAnchor="10.0" />
+      <JFXTextField fx:id="tfStatusServico" editable="false" labelFloat="true" layoutX="313.0" layoutY="100.0" prefHeight="25.0" prefWidth="279.0" promptText="Status de Serviço" AnchorPane.rightAnchor="10.0" />
+      <JFXTextArea fx:id="taAveriguacao" editable="false" labelFloat="true" layoutX="12.0" layoutY="139.0" prefHeight="117.0" prefWidth="579.0" promptText="Averiguação" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+      <HBox alignment="CENTER" layoutY="277.0" prefHeight="67.0" prefWidth="200.0" style="-fx-background-color: #6495ED;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="btnPDF" mnemonicParsing="false" onAction="#gerarPDF" prefHeight="42.0" prefWidth="133.0" style="-fx-background-radius: 30;" text="Gerar PDF">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/pdf.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
